@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/together.Api/together.Api.csproj" />
+  </Folder>
+</Solution>
