@@ -1,6 +1,29 @@
-@together.Api_HostAddress = http://localhost:5062
+@host = http://localhost:5062
 
-GET {{together.Api_HostAddress}}/weatherforecast/
-Accept: application/json
+GET {{host}}/api/sports
+
 
 ###
+
+POST {{host}}/api/users
+Content-Type: application/json
+{
+  "username": "fabrice",
+  "email": "fabrice@test.com",
+  "city": "Berlin"
+}
+###
+
+POST {{host}}/api/groups
+Content-Type: application/json
+{
+  "name": "Groupe de football",
+  "description": "Groupe pour les amateurs de football",
+  "city": "Berlin",
+  "level": "Tous les niveaux",
+  "sportId": 1,
+  "creatorId": 1
+}
+###
+
+GET {{host}}/api/groups?city=Berlin
